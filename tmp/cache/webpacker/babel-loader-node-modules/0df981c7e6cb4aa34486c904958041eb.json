@@ -1,0 +1,1 @@
+{"ast":null,"code":"// import \"../plugins/mapbox\";\n// import 'mapbox-gl/dist/mapbox-gl.css';","map":{"version":3,"sources":["/Users/sven/code/mschma/batch-398-join2kick/app/javascript/packs/mapbox.js"],"names":[],"mappings":"AAAA;AACA","sourcesContent":["// import \"../plugins/mapbox\";\n// import 'mapbox-gl/dist/mapbox-gl.css';\n"]},"metadata":{},"sourceType":"module"}

@@ -1,0 +1,18 @@
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+#map {
+  position: sticky;
+  top: 0;
+}
+
+@media (max-width: 615px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  #map {
+    display: none;
+  }
+}

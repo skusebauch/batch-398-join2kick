@@ -1,0 +1,28 @@
+<div class="content">
+  <div class="card-pitches">
+    <% @pitches.each do |pitch| %>
+      <div class="card-pitch">
+        <% if policy(pitch).index? %>
+          <img src="<%= pitch.picture %>" alt="">
+          <div class="card-pitch-description">
+            <div>
+              <h1><%= pitch.name %></h1>
+              <p id="address"><%= pitch.address %></p>
+            </div>
+            <div class="card-pitch-price">
+              <h3><%= pitch.price %> €</h3>
+            </div>
+
+          </div>
+        <% end %>
+        <%= link_to "", pitch_path(pitch), class: 'card-link-to-pitch' %>
+      </div>
+    <% end %>
+  </div>
+
+  <div id="map"
+    style="width: 100%; height: 100vh;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>

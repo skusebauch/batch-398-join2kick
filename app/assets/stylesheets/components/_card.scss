@@ -1,0 +1,76 @@
+.card-pitches{
+
+}
+
+.card-pitch {
+  display: flex;
+  overflow: hidden;
+  background: white;
+  height: 200px;
+  margin-bottom: 2px;
+  margin-right: 5px;
+  img {
+    height: 100%;
+    width: 125px;
+    object-fit: cover;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+
+}
+.card-pitch-description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-grow: 1;
+    // flex-shrink: 1;
+    margin-top: 15px;
+    margin-left: 15px;
+    h1 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 0px;
+    }
+    p {
+      font-size: 12px;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      padding-right: 20px;
+    }
+}
+
+.card-pitch-price {
+  position: relative;
+  h3 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+}
+
+.card-link-to-pitch {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: transparent;
+}
+
+
+// @media (max-width: 615px) {
+//   .card-pitch-description {
+//     grid-template-columns: 1fr;
+//   }
+// }
+

@@ -1,0 +1,27 @@
+<%= render "shared/background_image" %>
+
+<div class="container">
+
+  <h2>Log in</h2>
+  <br>
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-inputs" style="width: 450px; margin: 0 auto;">
+      <%= f.input :email,
+                  required: false,
+                  autofocus: true,
+                  label: false,
+                  input_html: { autocomplete: "email", placeholder: "E-Mail", style: "margin-bottom: 35px;"} %>
+      <%= f.input :password,
+                  required: false,
+                  label: false,
+                  input_html: { autocomplete: "current-password", placeholder: "Password", style: "margin-bottom: 35px;" } %>
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Log in", class: "button", style: "margin-bottom: 15px;" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>
