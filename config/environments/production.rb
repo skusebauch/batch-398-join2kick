@@ -11,7 +11,7 @@ Rails.application.configure do
   config.eager_load = true
 
   # login devise
-  config.action_mailer.default_url_options = { host: 'https://batch-398-join2kick.herokuapp.com/' }
+  config.action_mailer.default_url_options = { host: 'https://batch-398-pitchbooking.herokuapp.com/' }
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
