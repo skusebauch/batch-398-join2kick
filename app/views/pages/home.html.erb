@@ -13,7 +13,7 @@
     <div class="cards-home">
         <% @bookings.each do |booking| %>
 
-          <% if policy(booking).index? %>
+          <% if policy(booking).show? %>
             <div class="card-home">
               <img src="<%= booking.pitch.picture %>" class="card-img1" alt="">
 
