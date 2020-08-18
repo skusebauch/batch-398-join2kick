@@ -26800,3 +26800,31 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 67ms (Views: 63.8ms | ActiveRecord: 2.0ms | Allocations: 21457)
 
 
+Started GET "/" for ::1 at 2020-08-18 12:24:16 +0200
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:2
+  [1m[36mBooking Load (4.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/home.html.erb:14
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/policies/booking_policy.rb:14:in `show?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/policies/booking_policy.rb:14:in `show?'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/policies/booking_policy.rb:14:in `show?'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/policies/booking_policy.rb:14:in `show?'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/policies/booking_policy.rb:14:in `show?'
+  [1m[36mPitch Load (1.0ms)[0m  [1m[34mSELECT "pitches".* FROM "pitches" WHERE "pitches"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:18
+  Rendered pages/home.html.erb within layouts/application (Duration: 128.9ms | Allocations: 38652)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 534)
+  Rendered shared/_flashes.html.erb (Duration: 1.0ms | Allocations: 184)
+  Rendered shared/_footer.html.erb (Duration: 0.7ms | Allocations: 94)
+Completed 200 OK in 386ms (Views: 329.6ms | ActiveRecord: 31.5ms | Allocations: 87764)
+
+
